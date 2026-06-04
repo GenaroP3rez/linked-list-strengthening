@@ -83,11 +83,12 @@ public class Exercises {
     while (current.next.next != null){
         current = current.next; 
     }
-    }
+    
     
 
     current.next = null;
     return head; 
+}
 
     /**
      * Returns the minimum value in the linked list, or Integer.MAX_VALUE if
@@ -102,22 +103,21 @@ public class Exercises {
      */
     public static int min(ListNode head) {
        // return -1;  
-       public static int min(ListNode head){
-       (if head == null){
+       if (head == null){
         return Integer.MAX_VALUE;
        }
        int smallest = head.data;
        ListNode current = head.next;
-       }
+       
 
 
        while (current != null){
         if (current.data < smallest){
-            smallest = current.data
+            smallest = current.data;
         }
-        current = current.next
+        current = current.next;
        }
-       return smallest
+       return smallest;
     }
 
 
