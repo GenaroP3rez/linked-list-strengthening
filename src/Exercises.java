@@ -79,12 +79,12 @@ public class Exercises {
             return null;
             
         }
-        
-    }
-    ListNode current = head; 
+        ListNode current = head; 
     while (current.next.next != null){
         current = current.next; 
     }
+    }
+    
 
     current.next = null;
     return head; 
@@ -101,8 +101,25 @@ public class Exercises {
      * @return the minimum value in the list 
      */
     public static int min(ListNode head) {
-        return -1;  
+       // return -1;  
+       public static int min(ListNode head){
+       (if head == null){
+        return Integer.MAX_VALUE;
+       }
+       int smallest = head.data;
+       ListNode current = head.next;
+       }
+
+
+       while (current != null){
+        if (current.data < smallest){
+            smallest = current.data
+        }
+        current = current.next
+       }
+       return smallest
     }
+
 
     /**
      * Removes the first instance of the node with the minimum value from the
