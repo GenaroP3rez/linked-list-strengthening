@@ -12,8 +12,18 @@ public class Exercises {
      * @return the length of the list
      */
     public static int length(ListNode head) {
-        return -1;
+        //return -1;
+        int count = 0; 
+        ListNode current = head;
+
+        while (current != null) {
+            count++;
+            current = current.next;
+        }
+        return count; 
     }
+
+    
 
     /**
      * Adds a new value to the front of the list and returns the new head.
@@ -28,8 +38,28 @@ public class Exercises {
      * @param toAdd the value to add to the front
      * @return the new head of the linked list
      */
+
+    
     public static ListNode prepend(ListNode head, int toAdd) {
-        return null;
+        //return null;
+        ListNode newNode = new ListNode(toAdd, head); 
+        return newNode;
+
+
+        // if (toAdd == 0){
+        //     return head.next;
+
+        // }
+
+        // ListNode current = head; 
+        // for(int i = 0; i < toAdd +1 ; i++){
+        //     current = current.next; 
+
+        // }
+        // current.next = current.next.next;
+
+        // return head; 
+
     }
 
     /**
@@ -45,8 +75,19 @@ public class Exercises {
      * @return the head of the list with the last element removed
      */
     public static ListNode removeLast(ListNode head) {
-        return null;
+        if (head == null || head.next == null) {
+            return null;
+            
+        }
+        
     }
+    ListNode current = head; 
+    while (current.next.next != null){
+        current = current.next; 
+    }
+
+    current.next = null;
+    return head; 
 
     /**
      * Returns the minimum value in the linked list, or Integer.MAX_VALUE if
@@ -60,7 +101,7 @@ public class Exercises {
      * @return the minimum value in the list 
      */
     public static int min(ListNode head) {
-        return -1;
+        return -1;  
     }
 
     /**
