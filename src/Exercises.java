@@ -185,9 +185,19 @@ public class Exercises {
      * @return whether the values in bigList are twice the values in smallList
      */
     public static boolean isDoubled(ListNode smallList, ListNode bigList) {
-        return false;
-    }
+        //return false;
+        ListNode smallCurrent = smallList;
+        ListNode bigCurrent = bigList;
 
+        while (smallCurrent != null && bigCurrent != null){
+            if (bigCurrent.data != smallCurrent.data *2){
+                return false;
+            }
+            smallCurrent = smallCurrent.next;
+            bigCurrent = bigCurrent.next;
+        }
+        return smallCurrent == null && bigCurrent == null;
+    }
     /**
      * Rotates a list by k elements to the left and returns the new head.
      * 
