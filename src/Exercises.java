@@ -214,7 +214,6 @@ public class Exercises {
      */
     public static ListNode rotateLeft(ListNode head, int k) {
         //return null;
-        public static ListNode rotateLeft(ListNode head, int k){
             if (head == null || head.next == null || k == 0){
                 return head;
             }
@@ -247,4 +246,3 @@ public class Exercises {
 
 
     }
-}
