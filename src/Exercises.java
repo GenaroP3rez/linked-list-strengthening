@@ -220,7 +220,7 @@ public class Exercises {
             }
 
 
-            int size = length(fead);
+            int size = length(head);
             k = k % size;
 
             if (k == 0){
@@ -231,8 +231,19 @@ public class Exercises {
             for(int i = 1; i < k; i++){
                 current = current.next;
             }
-            ListNode
+            ListNode newHead = current.next;
+            current.next = null;
+
+            ListNode tail = newHead;
+
+            while(tail.next != null){
+                tail = tail.next;
+            }
+            tail.next = head;
+
+            return newHead;
         }
+
 
 
     }
